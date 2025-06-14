@@ -10,10 +10,6 @@ function App() {
   const [isPaused, setIsPaused] = useState(false);
 
   const handleStart = () => {
-    // if (hours < 0 || mins < 0 || seconds < 0) {
-    //   alert("Invalid input!");
-    //   return;
-    // }
     setIsStart(true);
   };
 
@@ -35,12 +31,13 @@ function App() {
 
   const handleChange = (e) => {
     const id = e.target.id;
+    const value = parseInt(e.target.value);
     if (id === "hours") {
-      setHours(e.target.value);
+      setHours(value);
     } else if (id === "mins") {
-      setMins(e.target.value);
+      setMins(value);
     } else {
-      setSeconds(e.target.value);
+      setSeconds(value);
     }
   };
   console.log(hours, mins, seconds, "testing");
@@ -70,8 +67,8 @@ function App() {
       tid = setInterval(() => {
         runTimer(seconds, mins, hours, tid);
       }, 1000);
+      setTimerId(tid);
     }
-    setTimerId(tid);
     return () => {
       return clearInterval(tid);
     };
