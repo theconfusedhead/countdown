@@ -1,0 +1,46 @@
+body {
+  background-color: cadetblue;
+  color: #fff;
+}
+
+.input-timers {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* border: 1px solid red; */
+}
+.input-timers > input {
+  height: 50px;
+  width: 50px;
+  text-align: center;
+  margin: 20px;
+  border: none;
+  outline: none;
+  font-size: 20px;
+}
+
+.timer-btn {
+  margin: 5px;
+  height: 40px;
+  width: 100px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-color: purple;
+  color: #fff;
+  border-radius: 5px;
+  font-size: 18px;
+  text-transform: uppercase;
+  
+}
+
+.input-container {
+  text-align: center;
+}
+
+.timer-counter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+}
